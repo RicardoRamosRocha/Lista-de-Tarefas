@@ -1,9 +1,13 @@
+import { Button } from "@/components/ui/button";    
+
+
 const Home = () => {
   return (
     <div>
-      <h1>Seja bem-vindo ao nosso sistema!</h1>
-      <p>Este é o sistema de gerenciamento de usuários e produtos.</p>
+        <Button>Cadastrar</Button> 
     </div>
+      
+      
   );
 }
 
