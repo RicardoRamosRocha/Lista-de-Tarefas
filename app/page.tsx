@@ -1,32 +1,22 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { Separator } from "@/components/ui/separator"
+import { CirclePlus } from 'lucide-react';
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-muted">
-      
-      <Card className="w-full max-w-md p-6 rounded-2xl shadow-lg">
-        
-        <CardHeader className="p-0 mb-4">
-          <CardTitle className="text-2xl text-center">
-            Cadastro
-          </CardTitle>
-        </CardHeader>
+   <main className="w-full h-screen  bg-gray-100 flex justify-center items-center ">
+      <Card className="w-lg p-2">
+        <div className="flex gap-2">
+          <Input placeholder="Adicionar tarefa" className="flex-1" />
+          <Button variant="outline"><CirclePlus/>Adicionar</Button>
+        </div>
 
-        <CardContent className="space-y-4 p-0">
-          <Input placeholder="Nome" />
-          <Input placeholder="Email" type="email" />
-          <Input placeholder="Senha" type="password" />
-
-          <Button className="w-full">
-            Cadastrar
-          </Button>
-        </CardContent>
+        <Separator/>
 
       </Card>
-      
-    </div>
+  </main>
   )
 }
 
