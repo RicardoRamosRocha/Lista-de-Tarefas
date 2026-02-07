@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
-import { CheckCheck, CirclePlus, SquarePen, Trash } from "lucide-react"
+import { CheckCheck, CirclePlus, ListCheck, Sigma, SquarePen, Trash } from "lucide-react"
 import { List, OctagonX  } from 'lucide-react';
 
 const Home = () => {
@@ -36,8 +36,34 @@ const Home = () => {
                 </div>
             </div>
 
-            
+            <div className="h-14 flex items-center justify-between border-t-1">
+                <div className="w-1 h-full bg-green-300"></div>
+                <p className="flex-1 px-2 text-sm">Estudos React</p>
+                <div className="flex gap-2 items-center">
+                  <SquarePen size={16} className="cursor-pointer text-gray-500 hover:text-gray-700"/>
+                  <Trash size={16} className="cursor-pointer text-gray-500 hover:text-gray-700"/>
+                </div>
+            </div>
           </div>
+
+          <div className="flex justify-between mt-4">
+            <div className="flex gap-2 items-center">
+              <ListCheck size={18}/>
+              <p className="text-xs">Tarefas concluídas (3/3) </p>
+            </div>
+            <Button className="text-xs h-7 cursor-pointer" variant="outline"><Trash/>Limpar tarefas concluídas</Button>   
+          </div>
+
+          <div className="h-2 w-full bg-gray-100 mt-4 rounded-md">
+            <div className="h-full bg-blue-500 rounded-md" style={{ width: '50%' }}></div>
+          </div>
+
+          <div className="flex justify-end items-center mt-2 gap-2">
+            <Sigma size={18}/>
+            <p className="text-xs ml-1">3 tarefas no total</p>
+          </div>
+
+
         </CardContent>
       </Card>
     </main>
